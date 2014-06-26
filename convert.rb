@@ -2,6 +2,8 @@ require 'RMagick'
 require 'pathname'
 require './util.rb'
 
+puts "compressing using quality: #{ARGV[0].to_i}"
+
 Dir.glob(File.expand_path("./files_to_convert") + "/*.*").each do |file|
   file_name = Pathname.new(file).basename
 
@@ -10,7 +12,7 @@ Dir.glob(File.expand_path("./files_to_convert") + "/*.*").each do |file|
   img = Magick::Image::read(file).first
   img.format = 'JPEG'
   #thumb = img.resize_to_fit(125, 125)
-  img.write("./converted_files/#{file_name.to_s.gsub("png","jpg")}") { self.quality = 50 }
+  img.write("./converted_files/#{file_name.to_s.gsub("png","jpg")}") { self.quality = ARGV[0].to_i }
 end
 
 # Generate HTML for image comparrison.
