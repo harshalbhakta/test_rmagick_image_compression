@@ -12,4 +12,4 @@ Follow below steps to test.
 
 * Once the execution is complete open the generated "output.html" file for results.
 
-<img src="https://github.com/harshalbhakta/test_rmagick_image_compression/blob/master/screenshot.png" width="800px" height="450px" />
+<img src="https://raw.githubusercontent.com/harshalbhakta/test_rmagick_image_compression/master/screenshot.png" width="800px" height="450px" />
