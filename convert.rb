@@ -20,13 +20,13 @@ Dir.glob(File.expand_path("./files_to_convert") + "/*.*").each do |file|
   image.format = 'JPEG'
   image.resize_to_fit!(compressed_max_width, compressed_max_height)
 
-  image.write("./compressed/#{file_name.to_s.gsub("png","jpg")}")# { self.quality = compressed_quality }
+  image.write("./compressed/#{file_name.to_s.gsub("png","jpg")}") { self.quality = compressed_quality }
 
   # Resize image to maxium dimensions
   image.resize_to_fit!(thumb_max_width, thumb_max_height)
 
   # Write image to file system
-  image.write("./thumb/#{file_name.to_s.gsub("png","jpg")}")# { self.quality = thumb_quality }
+  image.write("./thumb/#{file_name.to_s.gsub("png","jpg")}") { self.quality = thumb_quality }
 
   # Free image from memory
   image.destroy!
