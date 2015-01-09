@@ -1,5 +1,9 @@
 files_to_convert/*
-converted_files/*
+compressed/*
+thumb/*
+output/*
 !files_to_convert/.keep
-!converted_files/.keep
+!compressed/.keep
+!thumb/.keep
+!output/.keep
 output.html
